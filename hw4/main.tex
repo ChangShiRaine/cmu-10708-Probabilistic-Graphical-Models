@@ -1,0 +1,59 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{parskip}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{graphicx,subfigure}
+\usepackage{hyperref} % \url
+\usepackage{xcolor} %hilight
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+\usepackage{bm}
+\newtheorem{theorem}{Theorem}
+\usepackage[most]{tcolorbox}
+\newtcolorbox[]{solution}[1][]{%
+    breakable,
+    enhanced,
+    colback=white,
+    title=Solution,
+    #1
+}
+
+
+%% -------------------------------------------
+%% Homework-specific macros
+%% -------------------------------------------
+
+\usepackage{tikz}
+\usetikzlibrary{bayesnet}
+
+\newcommand{\DKL}[2]{D_{\textrm{KL}}\left[#1 \;\|\; #2\right]}
+\newcommand{\sbr}[1]{\left[#1\right]}
+\newcommand{\rbr}[1]{\left(#1\right)}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator*{\argmin}{\mathrm{arg\,min}}
+\DeclareMathOperator*{\argmax}{\mathrm{arg\,max}}
+%% -------------------------------------------
+
+\title{10-708 PGM (Spring 2020): Homework 4}
+\author{
+\begin{tabular}{rl}
+Andrew ID: & [your Andrew ID] \\
+Name: & [your first and last name] \\
+Collaborators: & [Andrew IDs of all collaborators, if any]
+\end{tabular}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\input{vae.tex}
+\clearpage
+
+\bibliographystyle{plain}
+\bibliography{main}
+
+\end{document}
